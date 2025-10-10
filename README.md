@@ -7,5 +7,6 @@
 
 * owner: alpha(team)
 * team: mirbehzad and jamali\
-to run thi project first install requierments.txt and run app.py.\
+\
+to run this project first install requierments.txt and run app.py.\
 after that go to your localhost to access the local site
