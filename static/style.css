@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  background: radial-gradient(circle at top, #1a1f2b, #0d0f13);
+  font-family: "Poppins", sans-serif;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  margin-top: 30px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #00d4ff;
+}
+
+header p {
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 40px 0;
+  width: 90%;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 25px;
+  width: 360px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+  text-align: center;
+  color: #00d4ff;
+}
+
+.file-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background: #222;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #00d4ff, #0077ff);
+  color: #fff;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #0077ff, #00d4ff);
+}
+
+.btn.stop {
+  background: linear-gradient(90deg, #ff3c3c, #ff7a7a);
+}
+
+.output-box {
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.output-box img,
+.output-box video {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #222;
+}
+
+video#webcam {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: 1px solid #333;
+}
+
+.webcam-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+footer {
+  margin-bottom: 20px;
+  color: #666;
+  font-size: 0.9rem;
+}

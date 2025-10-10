@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎯 YOLO Detection Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>🎯 YOLO Detection Dashboard</h1>
+    <p>Upload image, video or use webcam to detect objects with YOLOv8</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Image -->
+    <section class="card">
+      <h2>🖼️ Image Detection</h2>
+      <input type="file" id="imageInput" accept="image/*" class="file-input">
+      <button class="btn" onclick="uploadImage()">Run Detection</button>
+      <div class="output-box" id="imageResult"></div>
+    </section>
+
+    <!-- Video -->
+    <section class="card">
+      <h2>🎞️ Video Detection</h2>
+      <input type="file" id="videoInput" accept="video/*" class="file-input">
+      <button class="btn" onclick="uploadVideo()">Run Detection</button>
+      <div class="output-box" id="videoResult"></div>
+    </section>
+
+    <!--    directory-->
+      <section class="card">
+        <h2>📁 Batch Directory Processing</h2>
+        <form id="dirForm" action="/upload_directory" method="POST" enctype="multipart/form-data">
+          <input type="file" name="images" id="dirInput" accept="image/*" multiple class="file-input">
+          <button type="submit" class="btn">Run Batch Detection</button>
+        </form>
+      </section>
+
+    <!-- Webcam -->
+    <section class="card">
+      <h2>📡 Webcam Detection</h2>
+      <video id="webcam" autoplay playsinline></video>
+      <canvas id="canvas" style="display:none;"></canvas>
+      <div class="webcam-controls">
+        <button class="btn" onclick="startWebcam()">Start</button>
+        <button class="btn stop" onclick="stopWebcam()">Stop</button>
+      </div>
+      <div class="output-box">
+        <img id="outputFrame" alt="YOLO Output">
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>🚀 Powered by <strong>Flask</strong> + <strong>YOLOv8</strong></p>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

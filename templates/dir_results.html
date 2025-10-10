@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Directory Results</title>
+  <style>
+    .image-card { display:inline-block; margin:10px; border:1px solid #ccc; padding:5px; }
+    img { width:250px; }
+  </style>
+</head>
+<body>
+  <h1>Directory Processed Results</h1>
+  {% for item in results %}
+    <div class="image-card">
+      <img src="{{ url_for('serve_output', filename=output_dir + '/' + item.filename) }}">
+      <p>Labels: {{ item.labels|join(', ') }}</p>
+      <p>Confidences: {{ item.confs|join(', ') }}</p>
+    </div>
+  {% endfor %}
+</body>
+</html>
