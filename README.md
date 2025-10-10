@@ -6,6 +6,6 @@
 * dropout: 0.05
 
 * owner: alpha(team)
-* team: mirbehzad and jamali
+* team: mirbehzad and jamali\
 to run thi project first install requierments.txt and run app.py.\
 after that go to your localhost to access the local site
